@@ -3,6 +3,9 @@
  margin: 0 auto; /* centers it */
  overflow: hidden;
  white-space: nowrap;
+ background-image: url(images/background_filmstrip.jpg)
+backround-repeat: repeat-y;
+	
 }
 
 h1 {
@@ -14,6 +17,7 @@ h1 {
 	font-size: 3rem;
 	background: linear-gradient(180deg, red, blue);
 	color: white;
+	
 }
 
 hr {
@@ -21,15 +25,70 @@ display: block;
 border-color: black;
 margin-before: 0.5em;
 margin-after: 0.5em;
-border-width: 3px; }
+border-width: 3px;
+}
 
+.container {
+	display: inline;
+	font-size: 1.5em;
+	font-weight: 900;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: center;
+
+}
+
+li {
+	align-content: center;
+	display: inline;
+	width: 250px;
+	margin-right: 2px;
+	padding: 8px 55px 8px;
+	border: 2px solid black;
+	background-color: greenyellow;
+	font-size: 115%;
+	border-radius: 3%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover, a:active {
+    background-color: #7A991A;
+}
+
+#about_info {
+	float: left;
+	margin-top: 10px;
+	width: 30%;
+	border: 2px solid black;
+	height: 200px;
+}
+
+#upcoming_events {
+	float: left;
+	margin-top: 10px;
+	width: 30%;
+	border: 2px solid black;
+	height: 200px;
+}
+
+#comic_relief {
+	float: left;
+	margin-top: 10px;
+	width: 30%;
+	border: 2px solid black;
+	height: 200px;
+}
 
 
 p {
-padding: 1em; 1em; 1em;
+padding-top: 5px;
 font-family: 'Bitter', serif;
 text-align: justify;
 font-weight: 600;
+font-size: 1.25em;
 }
 
 /*
