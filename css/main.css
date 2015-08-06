@@ -144,7 +144,19 @@ h2 {
 	margin: 20px;
 }
 
+#contactform {
+	width: 500px;
+	align-content: center;
+	border: 5px solid black;
+	background-color: palegreen;
+	font-size: 2em;
+	
+}
 
+#fancyfeed {
+	color: black;
+	
+}
 
 /* slightly enhanced, universal clearfix hack */
 .clearfix:after {

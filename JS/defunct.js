@@ -43,3 +43,27 @@ function retNumVal(str2Num) {
 //    yourImg.style.height = '200px';
 //    yourImg.style.width = '200px';
 //}
+
+
+function pad(n) {
+    return (n < 10) ? ("0" + n) : n;
+}
+
+function getDate() {
+	
+var m_names = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+
+var m_names_long = new Array("January", "February", "March", "April", "May", "June", "July",
+							 "August", "September", "October", "November", "December");
+
+var d = new Date();
+
+var curr_date = d.getDate();
+
+var curr_month = d.getMonth();
+
+var curr_year = d.getFullYear();
+	
+
+return (m_names_long[curr_month] + " - " + pad(curr_date) + " - " + curr_year);
+}
