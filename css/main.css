@@ -1,3 +1,12 @@
+h1 {
+margin = 0;
+padding = 0;
+}
+
+iframe {
+    overflow-y:hidden;
+}
+
 #marquee-container {
  width: 100%; /* or whatever you want */
  margin: 0 auto; /* centers it */
@@ -28,13 +37,14 @@ margin-after: 0.5em;
 border-width: 3px;
 }
 
-.container {
+nav {
 	display: inline;
 	font-size: 1.5em;
 	font-weight: 900;
 	padding-left: 2px;
 	padding-right: 2px;
 	text-align: center;
+	position: fixed;
 
 }
 
@@ -105,10 +115,11 @@ a:active {
 
 #comic_relief {
 	float: left;
-	margin-top: 10px;
-	width: 30%;
+/*	margin-top: 10px;*/
+	width: 67%;
 	border: 2px solid black;
 	height: 200px;
+/*	padding: 5px;*/
 }
 
 
@@ -124,7 +135,7 @@ h2 {
 	text-align: center;
 	background-color: black;
 	color: white;
-	
+	margin: 0;
 	
 }
 

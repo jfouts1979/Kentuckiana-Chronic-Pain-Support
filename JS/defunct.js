@@ -1,10 +1,13 @@
 (function (window, document, undefined) {
-	var spaceinterval = 1;
+	
+	var spaceinterval = 10;
     var timeinterval = 50; // `speed`
     var max;
-    var firstrun = true;
+    
+	var firstrun = true;
      // Interval function:
-    var gallery = function() {
+    
+	var gallery = function() {
       var elem = document.getElementById("marquee-container");
       if (elem && elem.clientWidth < elem.scrollWidth)  {
        if (firstrun) {
@@ -12,9 +15,14 @@
         // Clone the children of the container until the
         // scrollWidth is at least twice as large as max.
         while (elem.scrollWidth < max * 2) {
-         var length = elem.children.length;
-         for (var i = 0; i < length; ++i) {
-          elem.appendChild(elem.children[i].cloneNode(true));
+        
+		 var length = elem.children.length;
+         
+		 for (var i = 0; i < length; ++i) {
+         	 var child = elem.children[i].cloneNode(true);
+			 child.setAttribute("id", "marquee-container");
+			 elem.appendChild(child);
+			 
          }
          break;
         }
