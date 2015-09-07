@@ -7,15 +7,55 @@ iframe {
     overflow-y:hidden;
 }
 
-#marquee-container {
- width: 100%; /* or whatever you want */
- margin: 0 auto; /* centers it */
- overflow: hidden;
- white-space: nowrap;
- background-image: url(images/background_filmstrip.jpg)
-backround-repeat: repeat-y;
-	
+nav {
+	display: inline;
+	font-size: 1.5em;
+	font-weight: 900;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: center;
+	position: relative;
+
 }
+
+nav li {
+	align-content: center;
+	display: inline;
+	width: 100%;
+    margin-right: 4%;
+	
+	/*font-size: 115%;*/
+	border-radius: 3%;
+margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#scroller {
+        position: relative;
+    }
+
+#scroller .innerScrollArea {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+#scroller ul {
+        padding: 5px;
+        margin: 0;
+        position: relative;
+    }
+
+#scroller li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+    }
+
 
 h1 {
 	text-align: center;
@@ -37,33 +77,14 @@ margin-after: 0.5em;
 border-width: 3px;
 }
 
-nav {
-	display: inline;
-	font-size: 1.5em;
-	font-weight: 900;
-	padding-left: 2px;
-	padding-right: 2px;
-	text-align: center;
-	position: fixed;
 
-}
-
-li {
-	align-content: center;
-	display: inline;
-	width: 100%;
-/*	margin-right: 4%;*/
-	
-	font-size: 115%;
-/*	border-radius: 3%;*/
-}
 
 a:link {
     font-weight: bold;
     color: #FFFFFF;
     background-color: forestgreen;
     text-align: center;
-    padding: 15px;
+    padding: 5px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -80,14 +101,14 @@ a:visited {
 
 a:hover {
     background-color: blue;
-	padding: 15px;
+	padding: 5px;
 	color: white;
 	
 }
 
 a:active {
     background-color: seagreen;
-	padding: 15px;
+	padding: 5px;
 	color: white;
 	
 }
@@ -138,18 +159,6 @@ h2 {
 	margin: 0;
 	
 }
-
-/*
-.headerimgformat {
-			margin: 5px;
-			border: 5px solid #000;
-			height: 200px;
-			width: 200px;
-			float: left;
-			border-radius: 5%;
-			box-shadow: 10px 10px 5px #888888;	
-		}
-*/
 
 #pain_info {
 	margin: 20px;
