@@ -1,26 +1,20 @@
-h1 {
-margin = 0;
-padding = 0;
-}
-
 iframe {
     overflow-y:hidden;
+	border: 0;
 }
 
 nav {
 	display: inline;
-	font-size: 1.25em;
+	font-size: 1.75em;
 	font-weight: 900;
 	padding-left: 2px;
 	padding-right: 2px;
 	text-align: center;
-	/*position: relative; */
 }
 
 nav ul {
 	margin: 0;
 	padding: 0;
-	
 }
 
 nav li {
@@ -28,11 +22,8 @@ nav li {
 	display: inline;
 	width: 100%;
     margin-right: 4%;
-	
-	/*font-size: 115%;*/
-	border-radius: 3%;
-margin-top: 0;
-	margin-bottom: 0;
+	border-radius: 25%;
+	border-bottom: solid 1px #FFF;
 }
 
 #scroller {
@@ -66,22 +57,21 @@ h1 {
 	text-align: center;
 	color: darkslateblue;
 	font-family: serif;
-/*	text-decoration: underline;*/
 	border: 5px solid #000;
 	font-size: 3rem;
 	background: linear-gradient(180deg, red, blue);
 	color: white;
-	
+	margin-bottom: 0.25em;
 }
 
 hr {
 display: block;
 border-color: black;
-/*
-margin-before: 0.5em;
-margin-after: 0.5em;
-*/
 border-width: 3px;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 
@@ -101,7 +91,7 @@ a:visited {
     color: darkviolet;
     background-color: yellow;
     text-align: center;
-    padding: 0px;
+    padding: 5px;
     text-decoration: none;
     text-transform: uppercase;
 }
