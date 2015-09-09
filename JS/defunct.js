@@ -146,3 +146,13 @@ var curr_year = d.getFullYear();
 
 return (m_names_long[curr_month] + " - " + pad(curr_date) + " - " + curr_year);
 }
+
+function getnumli() {
+	return $("#navlist").children().length;
+}
+
+//$('li').css('width',function(){
+//    var ulw = $('ul').width();
+//    return (ulw / $('li').length) + 'px';
+//});
+
