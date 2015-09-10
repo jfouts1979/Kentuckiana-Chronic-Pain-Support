@@ -3,6 +3,20 @@ iframe {
 	border: 0;
 }
 
+
+
+.header {
+	width: 100%;
+	top: 0;
+	position: fixed;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	
+}
+
 nav {
 	display: block;
 	font-size: 1.75em;
@@ -162,7 +176,7 @@ h2 {
 	background-color: black;
 	color: white;
 	margin: 0;
-	
+
 }
 
 #pain_info {
@@ -173,9 +187,13 @@ h2 {
 	width: 500px;
 	align-content: center;
 	border: 5px solid black;
-	background-color: palegreen;
+1	background-color: palegreen;
 	font-size: 2em;
 	
+}
+
+body {
+  overflow-y: scroll;
 }
 
 /* slightly enhanced, universal clearfix hack */
