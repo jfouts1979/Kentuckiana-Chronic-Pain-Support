@@ -6,8 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<title>About the Kentuckiana Chronic Pain Association</title>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="JS/jquery-1.11.3.min.js"></script>
 	<script src="JS/defunct.js"></script>
 
 </head>
@@ -15,38 +16,35 @@
 <body>
 
 	
-<div class = "header">
+<div class = "container">
 	
-	<div class = "container">
+	<header>
 
 		<h1>Kentuckiana Chronic Pain Support Group</h1>
-
-		<hr>
 	
 		<nav>
+			
+			<div id='cssmenu'>
 
-			<ul id="navlist">
-
-				<li><a href="about.html">About</a></li
-				><li><a href="calendar.html">Calendar</a></li
-				><li><a href="guestbook.html">Guestbook</a></li
-				><li><a href="contact.html">Contact</a></li
-				><li><a href="directions.html">Directions</a></li>
+			<ul>
+							
+				   <li class='active'><a href='about.html'><span>About</span></a></li>
+				   <li><a href='calendar.html'><span>Calendar</span></a></li>
+				   <li><a href='guestbook.html'><span>Guestbook</span></a></li>
+				   <li><a href='contact.html'><span>Contact</span></a></li>
+				   <li class='last'><a href='directions.html'><span>Directions</span></a></li>
 
 			</ul>
+			
+			</div>
 
 		</nav>
 		
-	</div>
+		<hr>
 		
-</header> 
-	
-	
-	<hr>
-	
-	<div id="scroller" style="width: document.window.maxwidth; height: 220px; margin: 0 auto;">
-		<div class="innerScrollArea">
-			<ul>
+		<div id="scroller" style="width: max-width; height: 200px; margin: 0 auto;">
+    <div class="innerScrollArea">
+        <ul>
 				<!-- Define photos here -->
 				<li><img src="images/rndhead1.jpg" width="200" height="200" alt="Missing Image"/></li>
 				<li><img src="images/rndhead2.jpg" width="200" height="200" alt="Missing Image"/></li>
@@ -56,9 +54,18 @@
 				<li><img src="images/rndhead6.jpg" width="200" height="200" alt="Missing Image"/></li>
 			</ul>
 		</div>
-	</div>
-	
+	</div>	
+		
 	<hr>
+		
+	</header>
+	
+</div>
+	
+	<div class="clearheader"></div>
+		
+    
+
 	
     <div id="about_info">
         <h2> About Information </h2>
@@ -82,13 +89,13 @@
 
     <div class="clearfix"></div>
 
-    <hr>
-
-<div class = "footer">
+<footer>
     <h2> Footer </h2>
 	<p>
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-</div>
+</footer>
+	
+	<div class="clearfix"></div>
 
 </body>
 	

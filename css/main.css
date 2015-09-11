@@ -4,41 +4,24 @@ iframe {
 }
 
 
-
-.header {
-	width: 100%;
+header {
 	top: 0;
+	padding: 0;
+	margin: 0;
+	width: auto;
 	position: fixed;
+	left: 0;
+	right: 0;
+
 }
 
 .container {
-	width: 100%;
-	margin: 0 auto;
+	width: auto;
+	margin: 0;
+	padding: 0;
 	
 }
 
-nav {
-	display: block;
-	font-size: 1.75em;
-	font-weight: 900;
-	text-align: center;
-}
-
-nav ul {
-	margin-top: 0.15em;
-	margin-bottom: 0.15em;
-	padding-top: 0.15em;
-	padding-bottom: 0.15em;
-	display:table;
-	text-align: center;
-	width: 100%;
-	background-color: orange;
-}
-
-nav li {
-	text-align: center;
-	display: table-cell;
-}
 
 #scroller {
         position: relative;
@@ -76,6 +59,7 @@ h1 {
 	background: linear-gradient(180deg, red, blue);
 	color: white;
 	margin-bottom: 0.25em;
+	border-radius: 5px;
 }
 
 hr {
@@ -88,6 +72,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 
+/*
 a {
 	display: inline-block;
 	width: 100%;
@@ -131,35 +116,48 @@ a:active {
 	color: white;
 	
 }
+*/
 
 #about_info {
 	float: left;
 	padding: 5px;
-	width: 100% - 10px;
+	width: auto;
 	border: 2px solid black;
-	height: 200px;
+	height: auto;
+	border-radius: 5px;
 	background-image: URL("/images/beigeparchment2.jpg")
 
-	
-	
 }
 
 #upcoming_events {
 	float: left;
 	margin-top: 10px;
-	width: 30%;
+	width: auto;
 	border: 2px solid black;
 	height: 200px;
 	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }
 
 #comic_relief {
 	float: left;
-/*	margin-top: 10px;*/
+	margin-top: 10px;
 	width: 67%;
 	border: 2px solid black;
 	height: 200px;
-/*	padding: 5px;*/
+	border-radius: 5px;
+}
+
+footer {
+	margin-top: 5px;
+	float: left;
+	width: auto;
+	border: 2px solid black;
+	height: auto;
+	border-radius: 5px;
+	
+	
 }
 
 
@@ -187,13 +185,9 @@ h2 {
 	width: 500px;
 	align-content: center;
 	border: 5px solid black;
-1	background-color: palegreen;
+	background-color: palegreen;
 	font-size: 2em;
 	
-}
-
-body {
-  overflow-y: scroll;
 }
 
 /* slightly enhanced, universal clearfix hack */
@@ -211,3 +205,11 @@ body {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+.clear { 
+	clear: both;
+}
+
+.clearheader {
+	
+	padding-top: 400px;
+}
