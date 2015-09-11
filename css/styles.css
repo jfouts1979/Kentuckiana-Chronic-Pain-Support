@@ -50,7 +50,7 @@
 }
 #cssmenu li {
   float: left;
-  margin: 0 80px 0 120px; /* need to figure out how to set width without pixels JRF */
+  margin: 0 80px 0 0px;
   border: 1px solid transparent;
   font-size: 2em;
 }

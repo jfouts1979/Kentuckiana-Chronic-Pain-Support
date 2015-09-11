@@ -6,12 +6,13 @@ iframe {
 
 header {
 	top: 0;
-	padding: 0;
+	padding: 3px;
 	margin: 0;
 	width: auto;
 	position: fixed;
 	left: 0;
 	right: 0;
+	background-color: darkblue;
 
 }
 
@@ -120,7 +121,6 @@ a:active {
 
 #about_info {
 	float: left;
-	padding: 5px;
 	width: auto;
 	border: 2px solid black;
 	height: auto;
@@ -143,7 +143,16 @@ a:active {
 #comic_relief {
 	float: left;
 	margin-top: 10px;
-	width: 67%;
+	width: 62%;
+	border: 2px solid black;
+	height: 200px;
+	border-radius: 5px;
+}
+
+#special {
+	float: right;
+	margin-top: 10px;
+	width: auto;
 	border: 2px solid black;
 	height: 200px;
 	border-radius: 5px;
@@ -212,4 +221,13 @@ h2 {
 .clearheader {
 	
 	padding-top: 400px;
+}
+
+.gmapdirect {
+	width: auto;
+	height: auto;
+	margin: 10px;
+	border: 5px solid black;
+	border-radius: 5px;
+	
 }
