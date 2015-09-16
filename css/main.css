@@ -231,3 +231,21 @@ h2 {
 	border-radius: 5px;
 	
 }
+
+/*
+html { background: red; }
+
+@media (max-width: 100%) {
+  html { 
+}*/
+
+/*@media 
+  only screen and (min-width: 100px),
+  not all and (min-width: 100px),
+  not print and (min-height: 100px),
+  (color),
+  (min-height: 100px) and (max-height: 1000px),
+  handheld and (orientation: landscape)
+{
+  html { background: red; }
+}*/

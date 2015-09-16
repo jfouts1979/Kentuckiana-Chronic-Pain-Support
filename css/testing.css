@@ -1,0 +1,42 @@
+/*
+.nav {
+  display:table;
+}
+.nav > li{
+  width: auto;
+  display:table-cell;
+}*/
+
+body {
+	padding-top: 85px;
+}
+
+.jumbotron {
+	text-align: center;
+	color: white;
+	background: url('/images/Sequoias.jpg');
+	
+	
+}
+
+.jumbotron p {
+	font-size: 1.5em;
+	
+}
+
+#about_info h2 {
+	text-align: center;
+}
+
+#about_info p {
+	text-align: justify;
+}
+
+.glyphicon {
+	
+	font-size: 1.5em;
+	display: blok;
+	text-align: left;
+	color: blue;
+	
+}
