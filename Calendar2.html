@@ -86,8 +86,68 @@
 	  	</div>
 
 <!--**SLICK CAROUSEL WRAP*************************************************************-->
+<!-- Slick Carousel Slider -->
 
+    <div class="slider">
+        <div class=""><img src="images/funny1.jpg"> </div>
+        <div class=""><img src="images/funny2.jpg"> </div>
+        <div class=""><img src="images/funny3.jpg"> </div>
+        <div class=""><img src="images/funny4.jpg"> </div>
+        <div class=""><img src="images/funny5.jpg"> </div>
+    </div>
+
+<!-- End Slick Carousel Slider -->
+
+
+
+
+<!-- Scripts for Slick Carousel -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+ 
+<!--
+	<script type="text/javascript" src="JS/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="JS/slick/slick.min.js"></script>
+-->
+	
+
+	<script type="text/javascript">
+
+    $(document).ready(function(){
+      $('.slider').slick({
+
+
+        slidesToShow: 1,
+
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              infinite: true
+              
+            }
+          },
+          {
+            breakpoint: 740,
+           settings: "unslick"
+          },
+          {
+            breakpoint: 480,
+            settings: "unslick"
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+           
+            });
+        });
+      </script>
   
+<!--
 		<div class="slides">
 			<div><img src="images/funny1.jpg" alt=""></div>
      		<div><img src="images/funny2.jpg" alt=""></div>
@@ -95,11 +155,9 @@
      		<div><img src="images/funny4.jpg" alt=""></div>
      		<div><img src="images/funny5.jpg" alt=""></div>
  		</div>
+-->
 	  
-	  	<script type="text/javascript" src="JS/jquery/jquery-1.11.3.min.js"></script>
-	  	  	  
-	  	<script type="text/javascript" src="JS/slick/slick.min.js"></script>
-	  
+<!--
 	  	<script type="text/javascript">
 		  	$(document).ready(function(){
   			$('.slides').slick({
@@ -113,6 +171,7 @@
 			});
 
 	  	</script>
+-->
 
 	</body>
 
