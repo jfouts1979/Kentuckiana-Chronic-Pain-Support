@@ -79,73 +79,47 @@
 	  	</div>
 <!--***GOOGLE CALENDAR IFRAME*********************************************************-->
 	  
+<!--
 		<div class="col-lg-8 left">
 			<iframe src="https://www.google.com/calendar/embed?			
 			src=722n13eelg77hrueu9mp1biusc%40group.calendar.google.com&ctz=America/New_York" style=" border:solid 5px #777 " 
 			width="800" height="600" frameborder="0" scrolling="yes"></iframe>
 	  	</div>
+-->
 
 <!--**SLICK CAROUSEL WRAP*************************************************************-->
 <!-- Slick Carousel Slider -->
-
-    <div class="slider">
-        <div class=""><img src="images/funny1.jpg"> </div>
-        <div class=""><img src="images/funny2.jpg"> </div>
-        <div class=""><img src="images/funny3.jpg"> </div>
-        <div class=""><img src="images/funny4.jpg"> </div>
-        <div class=""><img src="images/funny5.jpg"> </div>
+<div class="container col-lg-4 right">
+	<p>test</p>
+    <div class="slick-slider">
+        <div class="slick-slide"><img src="images/funny1.jpg"> </div>
+        <div class="slick-slide"><img src="images/funny2.jpg"> </div>
+        <div class="slick-slide"><img src="images/funny3.jpg"> </div>
+        <div class="slick-slide"><img src="images/funny4.jpg"> </div>
+        <div class="slick-slide"><img src="images/funny5.jpg"> </div>
     </div>
+	
+	<div class='slides'>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
 
+</div>
 <!-- End Slick Carousel Slider -->
 
 
-
+<!--
+<style>
+.slick-prev:before, .slick-next:before { 
+    color:red !important;
+}
+</style>
+-->
 
 <!-- Scripts for Slick Carousel -->
 
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
- 
-<!--
-	<script type="text/javascript" src="JS/jquery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="JS/slick/slick.min.js"></script>
--->
 	
-
-	<script type="text/javascript">
-
-    $(document).ready(function(){
-      $('.slider').slick({
-
-
-        slidesToShow: 1,
-
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              infinite: true
-              
-            }
-          },
-          {
-            breakpoint: 740,
-           settings: "unslick"
-          },
-          {
-            breakpoint: 480,
-            settings: "unslick"
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-           
-            });
-        });
-      </script>
   
 <!--
 		<div class="slides">
@@ -172,7 +146,19 @@
 
 	  	</script>
 -->
-
+  <script src="JS/jquery-1.11.3.min.js"></script>
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+  <script type="text/javascript" src="JS/slick/slick.min.js"></script>
+	
+	<script type="text/javascript">
+		$('.slick-slider').slick({
+			  dots: true,
+			  infinite: true,
+			  speed: 500,
+			  fade: true,
+			  cssEase: 'linear'
+		});
+      </script>
 	</body>
 
 </html>
