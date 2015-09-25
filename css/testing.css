@@ -24,6 +24,10 @@ body {
 	
 }
 
+.upcomingstyle {
+	align-content: center;
+}
+
 #about_info h2 {
 	text-align: center;
 }
@@ -39,6 +43,11 @@ body {
 	text-align: left;
 	color: blue;
 	
+}
+
+.adjustslidesize {
+	width: 263px;
+	height: 189px;
 }
 
 footer {

@@ -75,84 +75,52 @@
 				<p>A support group for those who suffer from chronic pain in the Greater Louisville, KY area.</p> 
 		
 			</div>
+
+	
+	<div class="row">
 		
-	  	</div>
-<!--***GOOGLE CALENDAR IFRAME*********************************************************-->
+		<!--***GOOGLE CALENDAR IFRAME*********************************************************-->
 	  
-<!--
-		<div class="col-lg-8 left">
+
+		<div class="col-lg-9">
 			<iframe src="https://www.google.com/calendar/embed?			
-			src=722n13eelg77hrueu9mp1biusc%40group.calendar.google.com&ctz=America/New_York" style=" border:solid 5px #777 " 
+			src=722n13eelg77hrueu9mp1biusc%40group.calendar.google.com&ctz=America/New_York" style=" border:solid 5px #777" 
 			width="800" height="600" frameborder="0" scrolling="yes"></iframe>
 	  	</div>
--->
 
-<!--**SLICK CAROUSEL WRAP*************************************************************-->
-<!-- Slick Carousel Slider -->
-<div class="container col-lg-4 right">
-	<p>test</p>
-    <div class="slick-slider">
-        <div class="slick-slide"><img src="images/funny1.jpg"> </div>
-        <div class="slick-slide"><img src="images/funny2.jpg"> </div>
-        <div class="slick-slide"><img src="images/funny3.jpg"> </div>
-        <div class="slick-slide"><img src="images/funny4.jpg"> </div>
-        <div class="slick-slide"><img src="images/funny5.jpg"> </div>
-    </div>
-	
-	<div class='slides'>
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
+
+		<!--***SLICK CAROUSEL WRAP*************************************************************-->
+		
+		<!-- Slick Carousel Slider -->
+		<div class="col-lg-3">
+			
+			<div class="slick-slider">
+				<div class="slick-slide"><img src="images/funny1.jpg" class="adjustslidesize"> </div>
+				<div class="slick-slide"><img src="images/funny2.jpg" class="adjustslidesize"> </div>
+				<div class="slick-slide"><img src="images/funny3.jpg" class="adjustslidesize"> </div>
+				<div class="slick-slide"><img src="images/funny4.jpg" class="adjustslidesize"> </div>
+				<div class="slick-slide"><img src="images/funny5.jpg" class="adjustslidesize"> </div>
+			</div>
+
+
+		</div>
+		
 	</div>
 
-</div>
-<!-- End Slick Carousel Slider -->
+	</div>
 
+	<!-- Scripts for Slick Carousel -->
 
-<!--
-<style>
-.slick-prev:before, .slick-next:before { 
-    color:red !important;
-}
-</style>
--->
+	<script src="JS/jquery-1.11.3.min.js"></script>
 
-<!-- Scripts for Slick Carousel -->
+	<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>** not necessary **-->
 
-	
-  
-<!--
-		<div class="slides">
-			<div><img src="images/funny1.jpg" alt=""></div>
-     		<div><img src="images/funny2.jpg" alt=""></div>
-     		<div><img src="images/funny3.jpg" alt=""></div>
-     		<div><img src="images/funny4.jpg" alt=""></div>
-     		<div><img src="images/funny5.jpg" alt=""></div>
- 		</div>
--->
-	  
-<!--
-	  	<script type="text/javascript">
-		  	$(document).ready(function(){
-  			$('.slides').slick({
-//    		setting-name: setting-value
-			asNavFor: '.slides',
-        	slidesToShow: 1,
-        	slidesToScroll: 1,
-        	arrows: true,
-        	fade: true
-  			});
-			});
-
-	  	</script>
--->
-  <script src="JS/jquery-1.11.3.min.js"></script>
-<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
-  <script type="text/javascript" src="JS/slick/slick.min.js"></script>
+	<script type="text/javascript" src="JS/slick/slick.min.js"></script>
 	
 	<script type="text/javascript">
 		$('.slick-slider').slick({
-			  dots: true,
+//			  dots: true,
+			  autoplay: true,
 			  infinite: true,
 			  speed: 500,
 			  fade: true,
