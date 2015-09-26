@@ -117,13 +117,19 @@ iframe#google_upcoming_events {
 .send_email a {
 	font-size: 5em;
 	height: 200px;
-	background-color: darkgreen;
+	background-color: slategray;
+	color: white;
 	padding-left: 157.0625px;
 	padding-right: 157.0625px;
 	padding-top: 61px;
 	padding-bottom: 61px;
 	border-radius: 5px;
 	margin-bottom: 30px;
+	text-decoration: none;
+}
+
+.send_email a:visited {
+	color: darkblue;
 }
 
 .fill_images {
