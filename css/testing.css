@@ -104,6 +104,46 @@ iframe#google_upcoming_events {
 	
 }
 
+.message {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.email_button {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.send_email a {
+	font-size: 5em;
+	height: 200px;
+	background-color: darkgreen;
+	padding-left: 157.0625px;
+	padding-right: 157.0625px;
+	padding-top: 61px;
+	padding-bottom: 61px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+
+.fill_images {
+	margin-top: 110px;
+}
+
+#Louisville_Email {
+	width: auto;
+	height: 175px;
+	text-align: left;
+	margin-left: 17.5px;
+	border-radius: 5px;
+	float: left;
+}
+
+#sphere_img {
+	margin-left: 65px;
+	height: 170px;
+	float: left;
+}
 
 footer {
 	border-top: 1px solid #e7e7e7;
