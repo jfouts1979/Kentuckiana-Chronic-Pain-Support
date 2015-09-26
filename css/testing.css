@@ -1,12 +1,3 @@
-/*
-.nav {
-  display:table;
-}
-.nav > li{
-  width: auto;
-  display:table-cell;
-}*/
-
 body {
 	padding-top: 85px;
 }
@@ -15,8 +6,6 @@ body {
 	text-align: center;
 	color: white;
 	background: url('/images/Sequoias.jpg');
-	
-	
 }
 
 .jumbotron p {
@@ -25,24 +14,36 @@ body {
 }
 
 .upcomingstyle {
-	align-content: center;
+	width: auto;
+	height: auto;
+}
+
+#about_info {
+	position: relative;
 }
 
 #about_info h2 {
 	text-align: center;
+	
 }
 
 #about_info p {
 	text-align: justify;
 }
 
+#current_news {
+	position: relative;
+}
+
+#current_news h2 {
+	text-align: center;
+}
+
 .glyphicon {
-	
 	font-size: 1.5em;
 	display: blok;
 	text-align: left;
 	color: blue;
-	
 }
 
 .adjustslidesize {
@@ -50,6 +51,40 @@ body {
 	height: 189px;
 }
 
+#google_upcoming_events
+{
+    height: 200px;
+    width: 100%;
+	margin-top: 100px;
+}
+
+iframe#google_upcoming_events {
+	vertical-align: baseline;
+}
+
+#google_upcoming_events { vertical-align: baseline; }
+
+
+.index_icon_left {
+	float: left;
+	height: 5em;
+	position: absolute;
+}
+
+.index_icon_right {
+	float: right;
+	height: 5em;
+}
+
 footer {
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	text-align: center;
+	background-color: #f8f8f8;
+}
+
+.clearfix {
+  overflow: auto;
 }
