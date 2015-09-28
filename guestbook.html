@@ -14,7 +14,12 @@
     <!-- Bootstrap -->
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap custom styling test css -->
 
@@ -89,6 +94,68 @@
 
     <!--**********************************************************************************-->
 
+	
+<script>	var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
+	
+myFirebaseRef.set({
+  title: "Hello World!",
+  author: "Firebase",
+  location: {
+    city: "San Francisco",
+    state: "California",
+    zip: 94103
+  }
+});
+	
+	</script>
+	
+	
+<div class="container">
+	
+	<div class="col-lg-6">
+	
+  	<h2>Please sign the guestbook if you would like to leave a comment!</h2>
+  	<p>In the name field, please choose a name you wish to appear in the guestbook:</p>
+
+		<form role="form">
+    
+	  		<div class="form-group">
+      		
+				<label for="usr">Name:</label>
+      			<input type="text" class="form-control" id="usr">
+    
+    
+      			<label for="email">Email Address:</label>
+      			<input type="email" class="form-control" id="email"><br>
+      			<p>Enter your comments below:</p>
+      		
+				<label for="comment">Comment:</label>
+      			<textarea class="form-control" rows="5" id="comment"></textarea>
+				<button type="submit" class="btn btn-default">Submit</button>
+	  		</div>	
+
+		</form>
+	
+	</div>
+
+</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     <script>
         var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
