@@ -100,6 +100,7 @@
 	
 	
 	
+<!--
 <div class="container">
 	
 	<div class="col-lg-6">
@@ -129,33 +130,53 @@
 	
 	</div>
 
-	</div>
+</div>
+-->
 	
-<script>
+	<!-- ************* start code for firebase guestbook form *************** -->
+	
+    <form>
+        <div class="post-name">
+            <input type="text" placeholder="Nickname:">
+        </div>
+        <div class="post-email">
+            <textarea type="email" placeholder="Email Address:"></textarea>
+        </div>
+		<div class="post-comment">
+			<textarea type="text" placeholder="Comment:"></textarea>
+		</div>
+        <button type="submit" class="submit">Submit</button>
+    </form>	 
+
+	<!-- ************* end firebase basic form code ************************* -->
+	
+	<!-- ************* begin firebase script code for storing data ********** -->
 	
 <script>	
 	
 var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
 	
-myFirebaseRef.set({
-  title: "Hello World!",
-  author: "Firebase",
-  location: {
-    city: "San Francisco",
-    state: "California",
-    zip: 94103
-  }
-});
+function funct1(evt)
+{
+  var nickname = $('#post-name').text();
+
+  var useremail = $('#post-email').text();
 	
+  var usercomment = $('#post-comment').text();	
+
+  var date = Date();
+
+  firebaseRef.set({Name: nickname, Email: useremail, Comment: usercomment, Date: date});
+  evt.preventDefault();
+}
+
+var submit = document.getElementsByTagName('button')[0];
+
+submit.onclick = funct1;
+
+</script>
 	
-	myFirebaseRef.child("location/city").on("value", function(snapshot) {
-  alert(snapshot.val());  // Alerts "San Francisco"
-});
-	
-	
-	</script>
-	
-	
+	<!-- ********** end firebase script code ******************************** -->
 	
 	
 	
