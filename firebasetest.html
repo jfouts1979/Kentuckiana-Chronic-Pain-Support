@@ -32,51 +32,85 @@
 <body>
 
 
+<div class="container">
+	
+	<div class="col-lg-6">
 
-    <form>
-        <div>
-            <input type="text" name="post-name" placeholder="Nickname:">
-        </div>
-		<button type="submit" class="submit">Submit</button>
-    </form>
+	<legend>Guestbook</legend>
+  	<h2>Please sign the guestbook if you would like to leave a comment!</h2>
+  	<p>In the name field, please choose a name you wish to appear in the guestbook:</p>
 
+		<form id="GuestBookForm" role="form">
+    
+	  		<div class="form-group">
+      		
+				<label for="name">Name:</label>
+      			<input type="text" class="form-control" id="_name" name="name">
+        
+      			<label for="email">Email Address:</label>
+      			<input type="email" class="form-control" id="_email" name = "email"><br>
+				
+      			<label for="city">City:</label>
+      			<input type="text" class="form-control" id="_city" name = "city"><br>				
+      			
+      			<label for="state">State:</label>
+      			<input type="text" class="form-control" id="_state" name = "state"><br>
+
+				<label for="zip">Zip:</label>
+      			<input type="text" class="form-control" id="_zipcode" name = "zipcode"><br>
+				
+				<p>Enter your comments below:</p>
+      			<label for="comment">Comment:</label>
+      			<textarea class="form-control" rows="5" id="_comment" name= "comment"></textarea>
+				
+				<button type="submit" class="btn btn-default">Submit</button>
+	  		
+			</div>	
+
+		</form>
+	
+	</div>
+
+</div>
 
     <script>
         var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
 
+        function funct2(evt) {
 
-//        dataBase.set({
-//            name: "John",
-//            email: "test@test.com",
-//            city: "New Albany",
-//            state: "Indiana",
-//            zip: 47150,
-//            comment: "test"
-//
-//        });
+            var name = $('#_name').val();
+            var email = $('#_email').val();
+			var city = $('#_city').val();
+			var state = $('#_state').val();
+			var zip = $('#_zipcode').val();
+			var comment = $('#_comment').val();
+			var date = Date();
 
+			dataBase.push({
 
-        function funct1(evt) {
-            var nickname = $('#post-name').text();
-
-            var date = Date();
-
-            dataBase.set({
-                name: nickname,
-//                Email: useremail,
-//                Comment: usercomment,
-                Date: date
+                'name': name,
+				'email': email,
+				'city' : city,
+				'state' : state,
+				'zip' : zip,
+				'date' : date
             });
+
             evt.preventDefault();
+			
+			dataBase.child("name").on("value", function(snapshot) {
+  		
+			alert(snapshot.val());  
+		});	
+		
         }
 
         var submit = document.getElementsByTagName('button')[0];
 
-        submit.onclick = funct1;
+        submit.onclick = funct2;
+		
+
     </script>
-
-
-
 
 </body>
 
