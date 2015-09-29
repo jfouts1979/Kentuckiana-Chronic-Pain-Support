@@ -143,7 +143,7 @@
             <textarea type="email" name="post-email" placeholder="Email Address:"></textarea>
         </div>
 		<div>
-			<textarea type="text" name="post-comment" placeholder="Comment:"></textarea>
+			<textarea type="text" name="text" placeholder="Comment:"></textarea>
 		</div>
         <button type="submit" class="submit">Submit</button>
     </form>	 
@@ -152,6 +152,7 @@
 	
 	<!-- ************* begin firebase script code for storing data ********** -->
 	
+<!--
 <script>	
 	
 var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
@@ -176,24 +177,79 @@ submit.onclick = funct1;
 
 </script>
 	
+-->
 	<!-- ********** end firebase script code ******************************** -->
 	
 	
+<script>
+//
+//        var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");	
+
+
+// #submit is the id of a button at the end of a form
+// 
+//$('#submit').onclick(function () {
+//		var name = $('#submit').val();
+//		var text = $('#submit').val();
+//		myDataRef.push({name: name, text: text});
+//		$('#messageInput').val('');
+//});
+//
+//myDataRef.on('child_added', function(snapshot) {
+//	// This will be called when an object is added to the database. 
+//	var message = snapshot.val();
+//	displayChatMessage(message.name, message.text);
+//});
+//	
+
+// #submit is the id of a button at the end of a form
+// 
+//$('#submit').onclick(function () {
+//	
+//	dataBase.push({ 'name': document.getElementById('name').value, 'Email': document.getElementById('email').value });
+	
+//myFirebaseRef.set({
+//
+//	alert('#post-name');
+//  name: $('#post-name');
+//  email: "Firebase",
+//  comment: {
+//  city: "San Francisco",
+//  state: "California",
+//  zip: 94103
+//  date: 
+//  }
+//});
+//	</script>
+	
+	
+ <script>
+    var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
+    var name = document.getElementById('post-name');
+    var email = document.getElementById('post-email');
+	var comment = document.getElementById('text')
+    var submitBtn = document.getElementById('submit');
+
+    var nameRef = dataBase.child('Name');
+    var emailRef = dataBase.child('Email');
+	var commentRef = dataBase.child('Comment')
+
 	
 	
 	
-	
-	
-	
-	
-	
+    submitBtn.addEventListener('click', function(){
+
+    dataBase.push({ 'name': document.getElementById('name').value, 'Email': document.getElementById('email').value})
+        //nameRef.set(fName.value);
+        //emailRef.set(eMail.value);
+    });
+
+</script>	
 	
 	
 	
 
-    <script>
-        var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
-    </script>
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
