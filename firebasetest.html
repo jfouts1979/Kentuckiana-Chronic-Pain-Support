@@ -32,29 +32,51 @@
 <body>
 
 
-	            
-      <form>
-		  <div>
-			<input type = "text" name = "post-name"  placeholder = "Nickname:" >
-            </div> 
-	  </form>
-	
-	
+
+    <form>
+        <div>
+            <input type="text" name="post-name" placeholder="Nickname:">
+        </div>
+		<button type="submit" class="submit">Submit</button>
+    </form>
+
+
     <script>
-		
         var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
 
 
-        myFirebaseRef.set({
-            name: John,
-			email: test@test.com,
-			city: New Albany,
-            state: Indiana,
-            zip: '47150',
-            comment: 'test'
-            
-        });
+//        dataBase.set({
+//            name: "John",
+//            email: "test@test.com",
+//            city: "New Albany",
+//            state: "Indiana",
+//            zip: 47150,
+//            comment: "test"
+//
+//        });
+
+
+        function funct1(evt) {
+            var nickname = $('#post-name').text();
+
+            var date = Date();
+
+            dataBase.set({
+                name: nickname,
+//                Email: useremail,
+//                Comment: usercomment,
+                Date: date
+            });
+            evt.preventDefault();
+        }
+
+        var submit = document.getElementsByTagName('button')[0];
+
+        submit.onclick = funct1;
     </script>
+
+
+
 
 </body>
 
