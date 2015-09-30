@@ -85,72 +85,84 @@
 	
 		
         function funct2(evt) {
-
-            var name = $('#_name').val();
-            var email = $('#_email').val();
-			var city = $('#_city').val();
-			var state = $('#_state').val();
-			var zip = $('#_zipcode').val();
-			var comment = $('#_comment').val();
-			var date = Date();
-
-        dataBase.set({
-            name: "John",
-            email: "test@test.com",
-            city: "New Albany",
-            state: "Indiana",
-            zip: 47150,
-            comment: "test"
-			date: date;
 			
-
-        });
+			alert('function');
 			
-			dataBase.push({
+					 dataBase.set({
+  title: "Hello World!",
+  author: "Firebase",
+  location: {
+    city: "San Francisco",
+    state: "California",
+    zip: 94103
+  }
+});
 
-                'name': name,
-				'email': email,
-				'city' : city,
-				'state' : state,
-				'zip' : zip,
-				'date' : date
-            });
-
-            evt.preventDefault();
-			
-			dataBase.child("name").on("value", function(snapshot) {
-  		
-			alert(snapshot.val());  
-		});	
-			
-	
-        }
-
-        var submit = document.getElementsByTagName('button')[0];
+//            var name = $('#_name').val();
+//            var email = $('#_email').val();
+//			var city = $('#_city').val();
+//			var state = $('#_state').val();
+//			var zip = $('#_zipcode').val();
+//			var comment = $('#_comment').val();
+//			var date = Date();
+//
+//        dataBase.set({
+//            name: "John",
+//            email: "test@test.com",
+//            city: "New Albany",
+//            state: "Indiana",
+//            zip: 47150,
+//            comment: "test"
+//			date: date;
+//			
+//
+//        });
+//			
+//			dataBase.push({
+//
+//                'name': name,
+//				'email': email,
+//				'city' : city,
+//				'state' : state,
+//				'zip' : zip,
+//				'date' : date
+//            });
+//
+//            evt.preventDefault();
+//			
+//			dataBase.child("name").on("value", function(snapshot) {
+//  		
+//			alert(snapshot.val());  
+//		});	
+//			
+//	
+//        }
+//
+//        var submit = document.getElementsByTagName('button')[0];
 
         submit.onclick = funct2;
 	
-	dataBase.once("value", function(allMessagesSnapshot) {
-    allMessagesSnapshot.forEach(function(messageSnapshot) {
-
-    var key = messageSnapshot.key();  
-    var name = messageSnapshot.child("name").val();  
-    var email = messageSnapshot.child("email").val();  
-	var city = messageSnapshot.child("city").val();
-	var state = messageSnapshot.child("state").val();
-	var zip = messageSnapshot.child("zip").val();
-	var comment = messageSnapshot.child("comment").val();
-
-	if (name !== null) {
-	
-
-	old_html = document.getElementById("node-id").innerHTML;
-	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
-		
-	}
-		
-  });
-});	
+//	dataBase.once("value", function(allMessagesSnapshot) {
+//    allMessagesSnapshot.forEach(function(messageSnapshot) {
+//
+//    var key = messageSnapshot.key();  
+//    var name = messageSnapshot.child("name").val();  
+//    var email = messageSnapshot.child("email").val();  
+//	var city = messageSnapshot.child("city").val();
+//	var state = messageSnapshot.child("state").val();
+//	var zip = messageSnapshot.child("zip").val();
+//	var comment = messageSnapshot.child("comment").val();
+//
+//	if (name !== null) {
+//	
+//
+//	old_html = document.getElementById("node-id").innerHTML;
+//	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
+//		
+//	}
+//		
+//  });
+//});	
 	
     </script>
 	
