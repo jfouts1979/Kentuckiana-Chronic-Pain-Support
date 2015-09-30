@@ -96,158 +96,133 @@
 
 	
 
-	
-	
-	
-	
-<!--
 <div class="container">
 	
 	<div class="col-lg-6">
-	
+
 	<legend>Guestbook</legend>
   	<h2>Please sign the guestbook if you would like to leave a comment!</h2>
   	<p>In the name field, please choose a name you wish to appear in the guestbook:</p>
 
-		<form id="Gbook" role="form" method="post" action="guestbook.html">
+		<form id="GuestBookForm" role="form">
     
 	  		<div class="form-group">
       		
 				<label for="name">Name:</label>
-      			<input type="text" class="form-control" id="name" name="_name">
-    
-    
+      			<input type="text" class="form-control" id="_name" name="name">
+        
       			<label for="email">Email Address:</label>
-      			<input type="email" class="form-control" id="email" name = "_email"><br>
-      			<p>Enter your comments below:</p>
-      		
-				<label for="comment">Comment:</label>
-      			<textarea class="form-control" rows="5" id="comment" name= "_comment"></textarea>
+      			<input type="email" class="form-control" id="_email" name = "email"><br>
+				
+      			<label for="city">City:</label>
+      			<input type="text" class="form-control" id="_city" name = "city"><br>				
+      			
+      			<label for="state">State:</label>
+      			<input type="text" class="form-control" id="_state" name = "state"><br>
+
+				<label for="zip">Zip:</label>
+      			<input type="text" class="form-control" id="_zipcode" name = "zipcode"><br>
+				
+				<p>Enter your comments below:</p>
+      			<label for="comment">Comment:</label>
+      			<textarea class="form-control" rows="5" id="_comment" name= "comment"></textarea>
+				
 				<button type="submit" class="btn btn-default">Submit</button>
-	  		</div>	
+	  		
+			</div>	
 
 		</form>
 	
 	</div>
 
+<div class="col-lg-6" id="node-id">
+	
+	<h2>Guestbook</h2>
+	
 </div>
--->
-	
-	<!-- ************* start code for firebase guestbook form *************** -->
-	
-    <form>
-        <div>
-            <input type="text" name="post-name" placeholder="Nickname:">
-        </div>
-        <div>
-            <textarea type="email" name="post-email" placeholder="Email Address:"></textarea>
-        </div>
-		<div>
-			<textarea type="text" name="text" placeholder="Comment:"></textarea>
-		</div>
-        <button type="submit" class="submit">Submit</button>
-    </form>	 
 
-	<!-- ************* end firebase basic form code ************************* -->
+</div>
+
+<script>
+
+		var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
+		
+        function funct2(evt) {
+
+            var name = $('#_name').val();
+            var email = $('#_email').val();
+			var city = $('#_city').val();
+			var state = $('#_state').val();
+			var zip = $('#_zipcode').val();
+			var comment = $('#_comment').val();
+			var date = Date();
+
+			dataBase.set({
+				name: name,
+				email: email,
+				city: city,
+				state: state,
+				zip: zip,
+				comment: comment,
+				date: date
+			});
+			
+			dataBase.push({
+
+                'name': name,
+				'email': email,
+				'city' : city,
+				'state' : state,
+				'zip' : zip,
+				'comment' : comment,
+				'date' : date
+            });
+
+            evt.preventDefault();
+			
+			dataBase.child("name").on("value", function(snapshot) {
+  		
+			alert(snapshot.val());  
+		});	
+			
 	
-	<!-- ************* begin firebase script code for storing data ********** -->
+        }
+
+        var submit = document.getElementsByTagName('button')[0];
+
+        submit.onclick = funct2;
+	
+	dataBase.once("value", function(allMessagesSnapshot) {
+    allMessagesSnapshot.forEach(function(messageSnapshot) {
+
+    var key = messageSnapshot.key();  
+    var name = messageSnapshot.child("name").val();  
+    var email = messageSnapshot.child("email").val();  
+	var city = messageSnapshot.child("city").val();
+	var state = messageSnapshot.child("state").val();
+	var zip = messageSnapshot.child("zip").val();
+	var comment = messageSnapshot.child("comment").val();
+
+	if (name !== null) {
+	
+
+	old_html = document.getElementById("node-id").innerHTML;
+	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
+		
+	}
+		
+  });
+});	
+	
+    </script>
+	
 	
 <!--
-<script>	
-	
-var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");
-	
-function funct1(evt)
-{
-  var nickname = $('#post-name').text();
-
-  var useremail = $('#post-email').text();
-	
-  var usercomment = $('#post-comment').text();	
-
-  var date = Date();
-
-  firebaseRef.set({Name: nickname, Email: useremail, Comment: usercomment, Date: date});
-  evt.preventDefault();
-}
-
-var submit = document.getElementsByTagName('button')[0];
-
-submit.onclick = funct1;
-
-</script>
-	
+	Bajas s-xl 30 2x,3x 35
+Blankets 25
+Tie dye shirts s-xl 25 2-4x 30 - ignore this stuff
 -->
-	<!-- ********** end firebase script code ******************************** -->
-	
-	
-<script>
-//
-//        var myFirebaseRef = new Firebase("https://shining-heat-4384.firebaseio.com/");	
 
-
-// #submit is the id of a button at the end of a form
-// 
-//$('#submit').onclick(function () {
-//		var name = $('#submit').val();
-//		var text = $('#submit').val();
-//		myDataRef.push({name: name, text: text});
-//		$('#messageInput').val('');
-//});
-//
-//myDataRef.on('child_added', function(snapshot) {
-//	// This will be called when an object is added to the database. 
-//	var message = snapshot.val();
-//	displayChatMessage(message.name, message.text);
-//});
-//	
-
-// #submit is the id of a button at the end of a form
-// 
-//$('#submit').onclick(function () {
-//	
-//	dataBase.push({ 'name': document.getElementById('name').value, 'Email': document.getElementById('email').value });
-	
-//myFirebaseRef.set({
-//
-//	alert('#post-name');
-//  name: $('#post-name');
-//  email: "Firebase",
-//  comment: {
-//  city: "San Francisco",
-//  state: "California",
-//  zip: 94103
-//  date: 
-//  }
-//});
-//	</script>
-	
-	
- <script>
-    var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
-    var name = document.getElementById('post-name');
-    var email = document.getElementById('post-email');
-	var comment = document.getElementById('text')
-    var submitBtn = document.getElementById('submit');
-
-    var nameRef = dataBase.child('Name');
-    var emailRef = dataBase.child('Email');
-	var commentRef = dataBase.child('Comment')
-
-	
-	
-	
-    submitBtn.addEventListener('click', function(){
-
-    dataBase.push({ 'name': document.getElementById('name').value, 'Email': document.getElementById('email').value})
-        //nameRef.set(fName.value);
-        //emailRef.set(eMail.value);
-    });
-
-</script>	
-	
-	
-	
 
  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -71,11 +71,19 @@
 	
 	</div>
 
+<div class="col-lg-6" id="node-id">
+	
+	<h2>Guestbook</h2>
+	
 </div>
 
-    <script>
-        var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
+</div>
 
+<script>
+
+		var dataBase = new Firebase("https://shining-heat-4384.firebaseio.com/");
+	
+		
         function funct2(evt) {
 
             var name = $('#_name').val();
@@ -86,6 +94,18 @@
 			var comment = $('#_comment').val();
 			var date = Date();
 
+        dataBase.set({
+            name: "John",
+            email: "test@test.com",
+            city: "New Albany",
+            state: "Indiana",
+            zip: 47150,
+            comment: "test"
+			date: date;
+			
+
+        });
+			
 			dataBase.push({
 
                 'name': name,
@@ -102,15 +122,44 @@
   		
 			alert(snapshot.val());  
 		});	
-		
+			
+	
         }
 
         var submit = document.getElementsByTagName('button')[0];
 
         submit.onclick = funct2;
-		
+	
+	dataBase.once("value", function(allMessagesSnapshot) {
+    allMessagesSnapshot.forEach(function(messageSnapshot) {
 
+    var key = messageSnapshot.key();  
+    var name = messageSnapshot.child("name").val();  
+    var email = messageSnapshot.child("email").val();  
+	var city = messageSnapshot.child("city").val();
+	var state = messageSnapshot.child("state").val();
+	var zip = messageSnapshot.child("zip").val();
+	var comment = messageSnapshot.child("comment").val();
+
+	if (name !== null) {
+	
+
+	old_html = document.getElementById("node-id").innerHTML;
+	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
+		
+	}
+		
+  });
+});	
+	
     </script>
+	
+	
+<!--
+	Bajas s-xl 30 2x,3x 35
+Blankets 25
+Tie dye shirts s-xl 25 2-4x 30 - ignore this stuff
+-->
 
 </body>
 
