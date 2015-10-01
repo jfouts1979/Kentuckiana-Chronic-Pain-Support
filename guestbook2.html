@@ -10,16 +10,45 @@
     <title>About the Kentuckiana Chronic Pain Association</title>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<!--	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
 	
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.css"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.js"></script>
+
+	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+	
     <link href="css/testing.css" rel="stylesheet">
 
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	
+	<script>
+    
+	var url = "https://shining-heat-4384.firebaseio.com";
+		
+    window.onload = function(){
+      
+	  var firebase = new Firebase(url);
+      var output = document.getElementById("output");
+      var link = document.getElementById("link");
+      var data;
+
+      link.href = url;
+      link.innerHTML = url;
+
+      firebase.child("/").on("value", function(response){
+        output.innerHTML = JSON.stringify(response.val(), null, 2);
+      });
+    }
+	
+	
+    </script>
 
 </head>
+
 
 <body>
 
@@ -88,8 +117,11 @@
 	
   <!--**********************************************************************************-->
 
-	
+    <p>The content of <a id="link" target="_blank"></a>.</p> 
+    <pre id="output">
 
+    </pre>
+	
 <div class="container">
 	
 	<div class="col-lg-6">
@@ -132,6 +164,60 @@
 <div class="col-lg-6" id="node-id">
 	
 	<h2>Guestbook</h2>
+	
+	<div class="table-responsive">
+	<table class="table table-striped">
+	<thead>
+		<th>Name</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Comment</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name #1</td>
+			<td>City #1</td>
+			<td>State #1</td>
+			<td>Zip #1</td>
+			<td>Comment</td>
+		</tr>
+		
+	</tbody>
+			
+	</table>
+	</div>
+	
+	<table data-url="https://shining-heat-4384.firebaseio.com" data-height="299" data-card-view="true" data-response-handler="responseHandler">
+    <thead>
+    <tr>
+        <th data-field="name">Name</th>
+        <th data-field="city">City</th>
+        <th data-field="state">State</th>
+		<th data-field="zip">Zip</th>
+        <th data-field="comment">Comment</th>
+    </tr>
+    </thead>
+</table>
+	
+	
+
+<script>
+    // client side
+    function responseHandler(res) {
+        return res.repos;
+    }
+
+    // server side
+    
+//    function responseHandler(res) {
+//        return {
+//            rows: res.repos;
+//            total: res.repos.length
+//        }
+//    }
+    
+</script>
 	
 </div>
 
@@ -194,12 +280,200 @@
 		
 	old_html = document.getElementById("node-id").innerHTML;
 	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
-		
+
 	}
 		
   });
 });	
-	
+		
+	// begin table javascript stuff //
+		
+	// Attach an asynchronous callback to read the data at our posts reference
+		
+		mydB.on("value", function(snapshot) {
+  			console.log(snapshot.val());
+		}, function (errorObject) {
+  			console.log("The read failed: " + errorObject.code);
+		});
+		
+	// End Asynchronous call //
+		
+		var myList = mydB.on("value", function(snapshot) {
+			snapshot.val();
+		});
+			
+		
+//	<table id="table-javascript"></table>
+//<script>
+//    $(function () {
+//        $('#via-javascript-table').next().click(function () {
+//            $(this).hide();
+//
+//            $('#table-javascript').bootstrapTable({
+//                method: 'get',
+//                url: 'mydB.on("value", function(snapshot) {}',
+//                cache: false,
+//                height: 400,
+//                striped: true,
+//                pagination: true,
+//                pageSize: 50,
+//                pageList: [10, 25, 50, 100, 200],
+//                search: true,
+//                showColumns: true,
+//                showRefresh: true,
+//                minimumCountColumns: 2,
+//                clickToSelect: true,
+//                columns: [{
+//                    field: 'state',
+//                    checkbox: true
+//                }, {
+//                    field: 'city',
+//                    title: 'city',
+//                    align: 'right',
+//                    valign: 'bottom',
+//                    sortable: true
+//                }, {
+//                    field: 'name',
+//                    title: 'name',
+//                    align: 'center',
+//                    valign: 'middle',
+//                    sortable: true,
+//                    formatter: nameFormatter
+//                }, {
+//                    field: 'state',
+//                    title: 'state',
+//                    align: 'left',
+//                    valign: 'top',
+//                    sortable: true,
+//                    formatter: priceFormatter,
+//                    sorter: priceSorter
+//                }, {
+//                    field: 'comment',
+//                    title: 'comment',
+//                    align: 'center',
+//                    valign: 'middle',
+//                    clickToSelect: false,
+//                    formatter: operateFormatter,
+//                    events: operateEvents
+//                }]
+//            });
+//        });
+//    });
+
+		// JavaScript Document
+
+//var myFirebase = new Firebase("https://shining-heat-4384.firebaseio.com/");
+//var dataJSON;
+//var jsonDL;
+//require([
+//      "dojo/dom", 
+//      "dojo/on", 
+//      "dojo/_base/lang", "dojo/domReady!"
+//    ], function(
+//    dom, 
+//    on, 
+//    lang,
+//    domReady
+//    )  {
+// var exportDataBtn = dom.byId("exportBtn");
+//      on(exportDataBtn, "click", JSONToCSVConvertor);
+//var exportJSONBtn = dom.byId("dlJSON");
+//      on(exportJSONBtn, "click", DownloadJSON);
+//function DownloadJSON(){
+//    //console.log(JSON.stringify(dataJSON));
+//    var jsonString = JSON.stringify(dataJSON, null, 4);
+//    //console.log(jsonString);
+//  jsonDL = exportJSONBtn;
+//  jsonDL.download = "BikeThefts.json";
+//  jsonDL.href = "data:application/json;charset=utf-8," + jsonString;
+//  jsonDL.innerHTML = "Download data as JSON";
+//};
+//var dataObject;
+//    //this function grabs a 'snapshot' of all the data in Firebase, then navigates down to the 'features' child. It then iterates through all the
+//    //children under 'attributes' and retrieves all attribute data. Then it converts them to strings or numbers and calls addPoint to map them
+//myFirebase.on("value", function(snapshot) {
+//dataObject = snapshot;
+//dataJSON = dataObject.val();
+//console.log(JSON.stringify(dataJSON));
+//
+//});
+//
+//function JSONToCSVConvertor() {
+//    //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
+//    var arrData = typeof dataJSON != 'object' ? JSON.parse(dataJSON) : dataJSON;
+//
+//    var CSV = '';    
+//    //Set Report title in first row or line
+//    var ShowLabel = true;
+//    var ReportTitle = "Data";
+//    CSV += ReportTitle + '\r\n\n';
+//
+//    //This condition will generate the Label/Header
+//    if (ShowLabel) {
+//        var row = "";
+//
+//        //This loop will extract the label from 1st index of on array
+//        for (var index in arrData[0]) {
+//
+//            //Now convert each value to string and comma-seprated
+//            row += index + ',';
+//        }
+//
+//        row = row.slice(0, -1);
+//
+//        //append Label row with line break
+//        CSV += row + '\r\n';
+//    }
+//
+//    //1st loop is to extract each row
+//    for (var i = 0; i < arrData.length; i++) {
+//        var row = "";
+//
+//        //2nd loop will extract each column and convert it in string comma-seprated
+//        for (var index in arrData[i]) {
+//            row += '"' + arrData[i][index] + '",';
+//        }
+//
+//        row.slice(0, row.length - 1);
+//
+//        //add a line break after each row
+//        CSV += row + '\r\n';
+//    }
+//
+//    if (CSV == '') {        
+//        alert("Invalid data");
+//        return;
+//    }   
+//
+//    //Generate a file name
+//    var fileName = "Guestbook_JSON_Data";
+//    //this will remove the blank-spaces from the title and replace it with an underscore
+//    fileName += ReportTitle.replace(/ /g,"_");   
+//
+//    //Initialize file format you want csv or xls
+//    var uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
+//
+//    // Now the little tricky part.
+//    // you can use either>> window.open(uri);
+//    // but this will not work in some browsers
+//    // or you will not get the correct file extension    
+//
+//    //this trick will generate a temp <a /> tag
+//    var link = document.createElement("a");    
+//    link.href = uri;
+//
+//    //set the visibility hidden so it will not effect on your web-layout
+//    link.style = "visibility:hidden";
+//    link.download = fileName + ".csv";
+//
+//    //this part will append the anchor tag and remove it after automatic click
+//    document.body.appendChild(link);
+//    link.click();
+//    document.body.removeChild(link);
+//}
+//
+//});
+//	
     </script>
 	
  
