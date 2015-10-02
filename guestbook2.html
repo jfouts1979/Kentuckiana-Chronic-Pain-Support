@@ -10,41 +10,55 @@
     <title>About the Kentuckiana Chronic Pain Association</title>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-<!--	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
-	
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.css"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.8.1/bootstrap-table.js"></script>
+    <!--	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>-->
 
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--
+    
+	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff"></script>
+	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf"></script>
+	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2"></script>
+-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/locale/bootstrap-table-zh-CN.min.js"></script>
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/testing.css" rel="stylesheet">
 
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-	
-	<script>
-    
-	var url = "https://shining-heat-4384.firebaseio.com";
-		
-    window.onload = function(){
-      
-	  var firebase = new Firebase(url);
-      var output = document.getElementById("output");
-      var link = document.getElementById("link");
-      var data;
 
-      link.href = url;
-      link.innerHTML = url;
+    <script>
+        var url = "https://shining-heat-4384.firebaseio.com";
 
-      firebase.child("/").on("value", function(response){
-        output.innerHTML = JSON.stringify(response.val(), null, 2);
-      });
-    }
-	
-	
+        window.onload = function() {
+
+            var firebase = new Firebase(url);
+            var output = document.getElementById("output");
+            var link = document.getElementById("link");
+            var data;
+
+            link.href = url;
+            link.innerHTML = url;
+
+            firebase.child("/").on("value", function(response) {
+                output.innerHTML = JSON.stringify(response.val(), null, 2);
+            });
+        }
     </script>
 
 </head>
@@ -58,7 +72,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
 
 
-        <div class="container">
+        <div class="container-fluid">
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -80,6 +94,7 @@
                     <li><a href='directions.html'><span class="glyphicon glyphicon-map-marker"></span> Directions</a></li>
 
                     <li class="dropdown">
+
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-link"></span> Resources</a>
 
                         <ul class="dropdown-menu">
@@ -114,376 +129,196 @@
     </div>
 
     <!--**********************************************************************************-->
-	
-  <!--**********************************************************************************-->
 
-    <p>The content of <a id="link" target="_blank"></a>.</p> 
+    <!--**********************************************************************************-->
+
+    <p>The content of
+        <a id="link" target="_blank"></a>.</p>
     <pre id="output">
 
     </pre>
-	
-<div class="container">
-	
-	<div class="col-lg-6">
 
-	<legend>Guestbook</legend>
-  	<h2>Please sign the guestbook if you would like to leave a comment!</h2>
-  	<p>In the name field, please choose a name you wish to appear in the guestbook:</p>
+    <div class="container">
 
-		<form id="GuestBookForm" role="form">
-    
-	  		<div class="form-group">
-      		
-				<label for="name">Name:</label>
-      			<input type="text" class="form-control" id="_name" name="name">
-        
-      			<label for="email">Email Address:</label>
-      			<input type="email" class="form-control" id="_email" name = "email"><br>
+        <div class="col-lg-6">
+
+            <legend>Guestbook</legend>
+            <h2>Please sign the guestbook if you would like to leave a comment!</h2>
+            <p>In the name field, please choose a name you wish to appear in the guestbook:</p>
+
+            <form id="GuestBookForm" role="form">
+
+                <div class="form-group">
+
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="_name" name="name">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="_email" name="email">
+                    <br>
+
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="_city" name="city">
+                    <br>
+
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="_state" name="state">
+                    <br>
+
+                    <label for="zip">Zip:</label>
+                    <input type="text" class="form-control" id="_zipcode" name="zipcode">
+                    <br>
+
+                    <p>Enter your comments below:</p>
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" rows="5" id="_comment" name="comment"></textarea>
+
+                    <button type="submit" id="gsubmitbtn" class="btn btn-default">Submit</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="col-lg-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Guestbook</h2>
+                </div>
+                <div id="node-id" class="panel-body">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row cardheader">
+                    
+					<span class="comment-name pull-left">{{name}}</span>
+					<span class="comment-city-state pull-right">{{city}}, {{state}}</span>
+
+                </div>
 				
-      			<label for="city">City:</label>
-      			<input type="text" class="form-control" id="_city" name = "city"><br>				
-      			
-      			<label for="state">State:</label>
-      			<input type="text" class="form-control" id="_state" name = "state"><br>
+				<div class="row"> 
+						{{comment}}
+				</div>
+            </div>
+        </div>
 
-				<label for="zip">Zip:</label>
-      			<input type="text" class="form-control" id="_zipcode" name = "zipcode"><br>
-				
-				<p>Enter your comments below:</p>
-      			<label for="comment">Comment:</label>
-      			<textarea class="form-control" rows="5" id="_comment" name= "comment"></textarea>
-				
-				<button type="submit" id="gsubmitbtn" class="btn btn-default">Submit</button>
-	  		
-			</div>	
 
-		</form>
-	
-	</div>
+    </script>
 
-<div class="col-lg-6" id="node-id">
-	
-	<h2>Guestbook</h2>
-	
-	<div class="table-responsive">
-	<table class="table table-striped">
-	<thead>
-		<th>Name</th>
-		<th>City</th>
-		<th>State</th>
-		<th>Zip</th>
-		<th>Comment</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Name #1</td>
-			<td>City #1</td>
-			<td>State #1</td>
-			<td>Zip #1</td>
-			<td>Comment</td>
-		</tr>
-		
-	</tbody>
-			
-	</table>
-	</div>
-	
-	<table data-url="https://shining-heat-4384.firebaseio.com" data-height="299" data-card-view="true" data-response-handler="responseHandler">
-    <thead>
-    <tr>
-        <th data-field="name">Name</th>
-        <th data-field="city">City</th>
-        <th data-field="state">State</th>
-		<th data-field="zip">Zip</th>
-        <th data-field="comment">Comment</th>
-    </tr>
-    </thead>
-</table>
-	
-	
+    <script>
+        var source = $("#entry-template").html();
 
-<script>
-    // client side
-    function responseHandler(res) {
-        return res.repos;
-    }
+        var template = Handlebars.compile(source);
 
-    // server side
-    
-//    function responseHandler(res) {
-//        return {
-//            rows: res.repos;
-//            total: res.repos.length
-//        }
-//    }
-    
-</script>
-	
-</div>
+        var mydB = new Firebase("https://shining-heat-4384.firebaseio.com/");
 
-</div>
+        function funct2(evt) {
 
-	
-	<script>
-	
-		var mydB = new Firebase("https://shining-heat-4384.firebaseio.com/");
-		
-		function funct2(evt) {
+            alert('function');
 
-			alert('function');
-			
             var name = $('#_name').val();
             var email = $('#_email').val();
-			var city = $('#_city').val();
-			var state = $('#_state').val();
-			var zip = $('#_zipcode').val();
-			var comment = $('#_comment').val();
-			var date = Date();
-	
-		
-		mydB.push({
-            'name': name,
-			'email': email,
-			'city' : city,
-			'state' : state,
-			'zip' : zip,
-			'date' : date,
-			'comment' : comment
-        });
-			
-		}
-		
-		//-- Submit button code from form submit -------------------------------//
+            var city = $('#_city').val();
+            var state = $('#_state').val();
+            var zip = $('#_zipcode').val();
+            var comment = $('#_comment').val();
+            var date = Date();
 
-		var submit = document.getElementById('gsubmitbtn');
+
+            mydB.push({
+                'name': name,
+                'email': email,
+                'city': city,
+                'state': state,
+                'zip': zip,
+                'date': date,
+                'comment': comment
+            });
+
+        }
+
+        //-- Submit button code from form submit -------------------------------//
+
+        var submit = document.getElementById('gsubmitbtn');
 
         submit.onclick = funct2;
-	
-	//-- For read of data firebase -----------------------------------------//
-	
-	mydB.once("value", function(allMessagesSnapshot) {
-    allMessagesSnapshot.forEach(function(messageSnapshot) {
 
-    var key = messageSnapshot.key();  
-    var name = messageSnapshot.child("name").val();  
-    var email = messageSnapshot.child("email").val();  
-	var city = messageSnapshot.child("city").val();
-	var state = messageSnapshot.child("state").val();
-	var zip = messageSnapshot.child("zip").val();
-	var comment = messageSnapshot.child("comment").val();
-		
-	//-- Conditional statement to ignore fields where name is blank -------//
 
-	if (name !== null) {
-	
-	// Statement to update HTML in node-id DIV for Guestbook //
-		
-	old_html = document.getElementById("node-id").innerHTML;
-	document.getElementById("node-id").innerHTML = old_html+name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
 
-	}
-		
-  });
-});	
-		
-	// begin table javascript stuff //
-		
-	// Attach an asynchronous callback to read the data at our posts reference
-		
-		mydB.on("value", function(snapshot) {
-  			console.log(snapshot.val());
-		}, function (errorObject) {
-  			console.log("The read failed: " + errorObject.code);
-		});
-		
-	// End Asynchronous call //
-		
-		var myList = mydB.on("value", function(snapshot) {
-			snapshot.val();
-		});
-			
-		
-//	<table id="table-javascript"></table>
-//<script>
-//    $(function () {
-//        $('#via-javascript-table').next().click(function () {
-//            $(this).hide();
-//
-//            $('#table-javascript').bootstrapTable({
-//                method: 'get',
-//                url: 'mydB.on("value", function(snapshot) {}',
-//                cache: false,
-//                height: 400,
-//                striped: true,
-//                pagination: true,
-//                pageSize: 50,
-//                pageList: [10, 25, 50, 100, 200],
-//                search: true,
-//                showColumns: true,
-//                showRefresh: true,
-//                minimumCountColumns: 2,
-//                clickToSelect: true,
-//                columns: [{
-//                    field: 'state',
-//                    checkbox: true
-//                }, {
-//                    field: 'city',
-//                    title: 'city',
-//                    align: 'right',
-//                    valign: 'bottom',
-//                    sortable: true
-//                }, {
-//                    field: 'name',
-//                    title: 'name',
-//                    align: 'center',
-//                    valign: 'middle',
-//                    sortable: true,
-//                    formatter: nameFormatter
-//                }, {
-//                    field: 'state',
-//                    title: 'state',
-//                    align: 'left',
-//                    valign: 'top',
-//                    sortable: true,
-//                    formatter: priceFormatter,
-//                    sorter: priceSorter
-//                }, {
-//                    field: 'comment',
-//                    title: 'comment',
-//                    align: 'center',
-//                    valign: 'middle',
-//                    clickToSelect: false,
-//                    formatter: operateFormatter,
-//                    events: operateEvents
-//                }]
-//            });
-//        });
-//    });
+        //-- For read of data firebase -----------------------------------------//
 
-		// JavaScript Document
 
-//var myFirebase = new Firebase("https://shining-heat-4384.firebaseio.com/");
-//var dataJSON;
-//var jsonDL;
-//require([
-//      "dojo/dom", 
-//      "dojo/on", 
-//      "dojo/_base/lang", "dojo/domReady!"
-//    ], function(
-//    dom, 
-//    on, 
-//    lang,
-//    domReady
-//    )  {
-// var exportDataBtn = dom.byId("exportBtn");
-//      on(exportDataBtn, "click", JSONToCSVConvertor);
-//var exportJSONBtn = dom.byId("dlJSON");
-//      on(exportJSONBtn, "click", DownloadJSON);
-//function DownloadJSON(){
-//    //console.log(JSON.stringify(dataJSON));
-//    var jsonString = JSON.stringify(dataJSON, null, 4);
-//    //console.log(jsonString);
-//  jsonDL = exportJSONBtn;
-//  jsonDL.download = "BikeThefts.json";
-//  jsonDL.href = "data:application/json;charset=utf-8," + jsonString;
-//  jsonDL.innerHTML = "Download data as JSON";
-//};
-//var dataObject;
-//    //this function grabs a 'snapshot' of all the data in Firebase, then navigates down to the 'features' child. It then iterates through all the
-//    //children under 'attributes' and retrieves all attribute data. Then it converts them to strings or numbers and calls addPoint to map them
-//myFirebase.on("value", function(snapshot) {
-//dataObject = snapshot;
-//dataJSON = dataObject.val();
-//console.log(JSON.stringify(dataJSON));
-//
-//});
-//
-//function JSONToCSVConvertor() {
-//    //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
-//    var arrData = typeof dataJSON != 'object' ? JSON.parse(dataJSON) : dataJSON;
-//
-//    var CSV = '';    
-//    //Set Report title in first row or line
-//    var ShowLabel = true;
-//    var ReportTitle = "Data";
-//    CSV += ReportTitle + '\r\n\n';
-//
-//    //This condition will generate the Label/Header
-//    if (ShowLabel) {
-//        var row = "";
-//
-//        //This loop will extract the label from 1st index of on array
-//        for (var index in arrData[0]) {
-//
-//            //Now convert each value to string and comma-seprated
-//            row += index + ',';
-//        }
-//
-//        row = row.slice(0, -1);
-//
-//        //append Label row with line break
-//        CSV += row + '\r\n';
-//    }
-//
-//    //1st loop is to extract each row
-//    for (var i = 0; i < arrData.length; i++) {
-//        var row = "";
-//
-//        //2nd loop will extract each column and convert it in string comma-seprated
-//        for (var index in arrData[i]) {
-//            row += '"' + arrData[i][index] + '",';
-//        }
-//
-//        row.slice(0, row.length - 1);
-//
-//        //add a line break after each row
-//        CSV += row + '\r\n';
-//    }
-//
-//    if (CSV == '') {        
-//        alert("Invalid data");
-//        return;
-//    }   
-//
-//    //Generate a file name
-//    var fileName = "Guestbook_JSON_Data";
-//    //this will remove the blank-spaces from the title and replace it with an underscore
-//    fileName += ReportTitle.replace(/ /g,"_");   
-//
-//    //Initialize file format you want csv or xls
-//    var uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
-//
-//    // Now the little tricky part.
-//    // you can use either>> window.open(uri);
-//    // but this will not work in some browsers
-//    // or you will not get the correct file extension    
-//
-//    //this trick will generate a temp <a /> tag
-//    var link = document.createElement("a");    
-//    link.href = uri;
-//
-//    //set the visibility hidden so it will not effect on your web-layout
-//    link.style = "visibility:hidden";
-//    link.download = fileName + ".csv";
-//
-//    //this part will append the anchor tag and remove it after automatic click
-//    document.body.appendChild(link);
-//    link.click();
-//    document.body.removeChild(link);
-//}
-//
-//});
-//	
+
+        mydB.once("value", function(allMessagesSnapshot) {
+            allMessagesSnapshot.forEach(function(messageSnapshot) {
+
+                var key = messageSnapshot.key();
+                var name = messageSnapshot.child("name").val();
+                var email = messageSnapshot.child("email").val();
+                var city = messageSnapshot.child("city").val();
+                var state = messageSnapshot.child("state").val();
+                var zip = messageSnapshot.child("zip").val();
+                var comment = messageSnapshot.child("comment").val();
+
+                //-- Conditional statement to ignore fields where name is blank -------//
+
+                if (name !== null) {
+
+                    // Statement to update HTML in node-id DIV for Guestbook //
+
+                    //                    old_html = document.getElementById("node-id").innerHTML;
+                    //  
+
+
+                    //					document.getElementById("node-id").innerHTML = old_html + name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
+
+                    console.log(messageSnapshot.val());
+                    var anyname = template(messageSnapshot.val());
+                    console.log(anyname);
+                    $("#node-id").append(template(messageSnapshot.val()));
+
+                }
+
+            });
+        });
+
+        // begin table javascript stuff //
+
+        // Attach an asynchronous callback to read the data at our posts reference
+
+        mydB.on("value", function(snapshot) {
+            console.log(snapshot.val());
+        }, function(errorObject) {
+            console.log("The read failed: " + errorObject.code);
+        });
+
+        // End Asynchronous call //
+
+        var myList = mydB.on("value", function(snapshot) {
+            snapshot.val();
+        });
     </script>
-	
- 
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-		
+
 </body>
-	
+
 <footer>
     <a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank"><img src="http://www.niftybuttons.com/scribble/facebook.png" border="0" margin="1px"></a>
 
@@ -494,5 +329,5 @@
         <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
     </div>
 </footer>
-	
+
 </html>

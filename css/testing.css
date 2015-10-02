@@ -75,7 +75,7 @@ iframe#google_upcoming_events {
 .index_icon_left {
 	float: left;
 	height: 5em;
-	position: absolute;
+/*	position: absolute;*/
 }
 
 .index_icon_right {
@@ -161,6 +161,13 @@ iframe#google_upcoming_events {
     border:solid 3px beige;
 }
 #gmapdirect iframe{
+}
+
+.cardheader {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: -5px;
+	
 }
 
 footer {
