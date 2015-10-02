@@ -9,34 +9,42 @@
 
     <title>About the Kentuckiana Chronic Pain Association</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!--*************************************************************-->
+	<!--********************* BOOTSTRAP *****************************-->
+	<!--*************************************************************-->
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!--
+	<!--
     
 	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff"></script>
 	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.ttf"></script>
 	<script src="bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2"></script>
--->
+	
+	-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.js"></script>
-
-    <!-- Latest compiled and minified Locales -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/locale/bootstrap-table-zh-CN.min.js"></script>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/testing.css" rel="stylesheet">
+    <!--*************************************************************-->
+	<!--********************* HANDLEBARS ****************************-->
+	<!--*************************************************************-->
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js"></script>
+	
+    <!--*************************************************************-->
+	<!--*********************** FIREBASE ****************************-->
+	<!--*************************************************************-->
 
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	
+    <!--*************************************************************-->
+	<!--********************* CUSTOM STYLE **************************-->
+	<!--*************************************************************-->	
+	
+	<link href="css/testing.css" rel="stylesheet">
 
 </head>
 
@@ -97,16 +105,15 @@
         <div class="jumbotron">
 
             <h1>Kentuckiana Chronic Pain Support Group</h1>
-
             <p>A support group for those who suffer from chronic pain in the Greater Louisville, KY area.</p>
 
         </div>
 
     </div>
-
-    <!--**********************************************************************************-->
-
-    <!--**********************************************************************************-->
+	
+	<!--*************************************************************-->
+    <!--*****************  GUESTBOOK INPUT FORM  ********************-->
+	<!--*************************************************************-->
 
     <div class="container">
 
@@ -151,7 +158,10 @@
 
         </div>
 
-
+		<!--*************************************************************-->
+    	<!--********************  GUESTBOOK OUTPUT  *********************-->
+		<!--*************************************************************-->
+		
         <div class="col-lg-6">
 
             <div class="panel panel-default">
@@ -185,6 +195,10 @@
 
 
     </script>
+	
+	<!--*************************************************************-->
+    <!--*****************  FIREBASE & HANDLEBARS  *******************-->
+	<!--*************************************************************-->
 
     <script>
         var source = $("#entry-template").html();
@@ -244,26 +258,15 @@
                 //-- Conditional statement to ignore fields where name is blank -------//
 
                 if (name !== null) {
-
-                    // Statement to update HTML in node-id DIV for Guestbook //
-
-                    //                    old_html = document.getElementById("node-id").innerHTML;
-                    //  
-
-
-                    //					document.getElementById("node-id").innerHTML = old_html + name + ' ' + city + ' ' + state + ' ' + comment + "<br>";
-
-                    console.log(messageSnapshot.val());
-                    var anyname = template(messageSnapshot.val());
-                    console.log(anyname);
+//                    console.log(messageSnapshot.val());
+//                    var anyname = template(messageSnapshot.val());
+//                    console.log(anyname);
                     $("#node-id").append(template(messageSnapshot.val()));
 
                 }
 
             });
         });
-
-        // begin table javascript stuff //
 
         // Attach an asynchronous callback to read the data at our posts reference
 
@@ -279,25 +282,37 @@
             snapshot.val();
         });
     </script>
+	
+	<!--*************************************************************-->
+    <!--*************************  SCRIPT REFS  *********************-->
+	<!--*************************************************************-->
 
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 
 </body>
 
-<footer>
-    <a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank"><img src="http://www.niftybuttons.com/scribble/facebook.png" border="0" margin="1px"></a>
+	<!--*************************************************************-->
+    <!--**********************  FOOTER ******************************-->
+	<!--*************************************************************-->
 
-    <a href="https://twitter.com/Patient2Person" target="_blank"><img src="http://www.niftybuttons.com/scribble/twitter.png" border="0" margin="1px"></a>
+    <footer>
+        
+		<a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/facebook.png" border="0" margin="1px"></a>
+        <a href="https://twitter.com/Patient2Person" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/twitter.png" border="0" margin="1px"></a>
 
-    <div class="container">
-        <br>
-        <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
-    </div>
-</footer>
+        <div class="container">
+			
+            <br>
+            <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
+        </div>
+    
+	</footer>
+
+	<!--*************************************************************-->
+    <!--************************* END FOOTER  ***********************-->
+	<!--*************************************************************-->
 
 </html>

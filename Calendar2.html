@@ -8,45 +8,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>About the Kentuckiana Chronic Pain Association</title>
+	
+    <!--*************************************************************-->
+	<!--********************* BOOTSTRAP *****************************-->
+	<!--*************************************************************-->
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/testing.css" rel="stylesheet">
-
-    <!-- Slick links -->
+    <!--*************************************************************-->
+	<!--*********************** SLICK *******************************-->
+	<!--*************************************************************-->
 
     <link rel="stylesheet" type="text/css" href="JS/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="JS/slick/slick-theme.css" />
 
+    <!--*************************************************************-->
+	<!--********************* CUSTOM STYLE **************************-->
+	<!--*************************************************************-->
+	
+   <link href="css/testing.css" rel="stylesheet">
+
 </head>
 
-
 <body>
+ 
+	<!--*************************************************************-->
+    <!--**********************  NAVBAR  *****************************-->
+	<!--*************************************************************-->
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
 
-    <!--**********************************************************************************-->
+		<div class="container-fluid">
 
-    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
 
-
-        <div class="container">
-
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#test-navbar-collapse" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+    
+			<a class="navbar-brand" href="#">KCPS</a>			
+		
+		</div>
 
-            <a class="navbar-brand" href="#">KCPS</a>
+				<div class="collapse navbar-collapse" id="test-navbar-collapse">
 
-
-            <div class="collapse navbar-collapse">
-
-                <ul class="nav nav-pills navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
 
                     <li><a href='index.html'><span class="glyphicon glyphicon-home"> Home</span></a></li>
                     <li class='active'><a href='Calendar2.html'><span class="glyphicon glyphicon-calendar"></span> Calendar</a></li>
-                    <li><a href='guestbook.html'><span class="glyphicon glyphicon-book"></span> Guestbook</a></li>
+                    <li><a href='guestbook2.html'><span class="glyphicon glyphicon-book"></span> Guestbook</a></li>
                     <li><a href='contact.html'><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
                     <li><a href='directions.html'><span class="glyphicon glyphicon-map-marker"></span> Directions</a></li>
 
@@ -60,20 +73,18 @@
                         </ul>
                     </li>
 
-
                 </ul>
-            </div>
-
-
+            
+				</div>
 
         </div>
 
-    </div>
+	</nav>
 
+	<!--*************************************************************-->
+    <!--**********************  END OF NAVBAR  **********************-->
+	<!--*************************************************************-->
 
-
-
-    <!--**********************************************************************************-->
 
     <div class="container">
 
@@ -84,11 +95,11 @@
 
         </div>
 
-
         <div class="row">
 
-            <!--***GOOGLE CALENDAR IFRAME*********************************************************-->
-
+			<!--*************************************************************-->
+    		<!--********************  GOOGLE CAL IFRAME  ********************-->
+			<!--*************************************************************-->
 
             <div class="col-lg-9">
 
@@ -110,10 +121,14 @@
 
             </div>
 
+			<!--*************************************************************-->
+    		<!--******************  SLICK CAROUSEL WRAP  ********************-->
+			<!--*************************************************************-->
 
-            <!--***SLICK CAROUSEL WRAP*************************************************************-->
-
-            <!-- Slick Carousel Slider -->
+            <!--*************************************************************-->
+    		<!--******************  SLICK CAROUSEL SLIDER  ******************-->
+			<!--*************************************************************-->
+			
             <div class="col-lg-3 left">
 
                 <div class="slide-wrapper">
@@ -138,24 +153,27 @@
 
                 <div class="img_wrapper">
 
-
                     <img src="/images/invisibleillnessawareness.jpg">
 
                 </div>
 
             </div>
+			
+            <!--*************************************************************-->
+    		<!--*******************  END CAROUSEL SLIDER  *******************-->
+			<!--*************************************************************-->
 
         </div>
 
     </div>
-
-    <!-- Scripts for Slick Carousel -->
+	
+	<!--*************************************************************-->
+    <!--*************************  SCRIPT REFS  *********************-->
+	<!--*************************************************************-->
 
     <script src="JS/jquery-1.11.3.min.js"></script>
-
-    <!--  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>** not necessary **-->
-
     <script type="text/javascript" src="JS/slick/slick.min.js"></script>
+	<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $('.slick-slider').slick({
@@ -168,21 +186,29 @@
         });
     </script>
 
+</body>
+
+	<!--*************************************************************-->
+    <!--**********************  FOOTER ******************************-->
+	<!--*************************************************************-->
 
     <footer>
-        <a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank"><img src="http://www.niftybuttons.com/scribble/facebook.png" border="0" margin="1px"></a>
-
-        <a href="https://twitter.com/Patient2Person" target="_blank"><img src="http://www.niftybuttons.com/scribble/twitter.png" border="0" margin="1px"></a>
+        
+		<a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/facebook.png" border="0" margin="1px"></a>
+        <a href="https://twitter.com/Patient2Person" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/twitter.png" border="0" margin="1px"></a>
 
         <div class="container">
+			
             <br>
             <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
         </div>
-    </footer>
+    
+	</footer>
 
-	<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-
-
-</body>
+	<!--*************************************************************-->
+    <!--************************* END FOOTER  ***********************-->
+	<!--*************************************************************-->
 
 </html>
