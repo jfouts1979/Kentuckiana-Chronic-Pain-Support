@@ -119,35 +119,35 @@
 
         <div class="col-lg-6">
 
-            <legend>Guestbook</legend>
+			<!--<legend>Guestbook</legend>-->
             <h2>Please sign the guestbook if you would like to leave a comment!</h2>
             <p>In the name field, please choose a name you wish to appear in the guestbook:</p>
 
-            <form id="GuestBookForm" role="form">
+            <form id="GuestBookForm">
 
                 <div class="form-group">
 
-                    <label for="name">Name:</label>
+                    <label for="_name">Name:</label>
                     <input type="text" class="form-control" id="_name" name="name">
 
-                    <label for="email">Email Address:</label>
+                    <label for="_email">Email Address:</label>
                     <input type="email" class="form-control" id="_email" name="email">
                     <br>
 
-                    <label for="city">City:</label>
+                    <label for="_city">City:</label>
                     <input type="text" class="form-control" id="_city" name="city">
                     <br>
 
-                    <label for="state">State:</label>
+                    <label for="_state">State:</label>
                     <input type="text" class="form-control" id="_state" name="state">
                     <br>
 
-                    <label for="zip">Zip:</label>
+                    <label for="_zipcode">Zip:</label>
                     <input type="text" class="form-control" id="_zipcode" name="zipcode">
                     <br>
 
                     <p>Enter your comments below:</p>
-                    <label for="comment">Comment:</label>
+                    <label for="_comment">Comment:</label>
                     <textarea class="form-control" rows="5" id="_comment" name="comment"></textarea>
 
                     <button type="submit" id="gsubmitbtn" class="btn btn-default">Submit</button>
@@ -283,6 +283,30 @@
         });
     </script>
 	
+		<!--*************************************************************-->
+    	<!--**********************  FOOTER ******************************-->
+		<!--*************************************************************-->
+
+    <footer>
+        
+		<a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/facebook.png" alt="Facebook Icon" /></a>
+        <a href="https://twitter.com/Patient2Person" target="_blank">
+		<img src="http://www.niftybuttons.com/scribble/twitter.png" alt="Twitter Icon"  /></a>
+
+        <div class="container">
+			
+			<br>
+            <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and 	Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
+			
+		</div>
+    
+	</footer>
+
+	<!--*************************************************************-->
+    <!--************************* END FOOTER  ***********************-->
+	<!--*************************************************************-->
+	
 	<!--*************************************************************-->
     <!--*************************  SCRIPT REFS  *********************-->
 	<!--*************************************************************-->
@@ -291,28 +315,5 @@
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 
 </body>
-
-	<!--*************************************************************-->
-    <!--**********************  FOOTER ******************************-->
-	<!--*************************************************************-->
-
-    <footer>
-        
-		<a href="https://www.facebook.com/groups/KentuckianaChronicPain/" target="_blank">
-		<img src="http://www.niftybuttons.com/scribble/facebook.png" alt="Facebook Icon" border="0" margin="1px" /></a>
-        <a href="https://twitter.com/Patient2Person" target="_blank">
-		<img src="http://www.niftybuttons.com/scribble/twitter.png" alt="Twitter Icon" border="0" margin="1px" /></a>
-
-        <div class="container">
-			
-            <br>
-            <p>If you are experiencing an emergency situation, please dial 911. To stay in touch with other members please follow the Facebook and Twitter icon links below. The Facebook group is a closed group and moderated. Closed group content cannot be seen by anyone other than those in the group. We are here to offer support, please do not hesitate to reach out.</p>
-        </div>
-    
-	</footer>
-
-	<!--*************************************************************-->
-    <!--************************* END FOOTER  ***********************-->
-	<!--*************************************************************-->
 
 </html>
