@@ -61,11 +61,8 @@ body {
 	margin: 0;
 }
 
-
-
 iframe#google_upcoming_events {
-	vertical-align: top;
-	
+	vertical-align: top;	
 }
 
 iframe#upcoming_style {
@@ -77,7 +74,6 @@ iframe#upcoming_style {
 #upcoming_events {
 	text-align: center;
 }
-
 
 .index_icon_left {
 	float: left;
@@ -95,13 +91,13 @@ iframe#upcoming_style {
 	height: 210px;
 }
 
-/*
-.slide_wrapper {
-	padding-right: 50px;
-}
-*/
-#gcal_full {
+#gcal_full_frame {
 	margin-bottom: 10px;
+	border: solid 5px #777;
+	width: 100%;
+	border-radius: 5px;
+	height: 600px;
+	border: 2;
 }
 
 .img_wrapper {
