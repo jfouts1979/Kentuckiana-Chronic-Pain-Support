@@ -6,6 +6,7 @@ body {
 	text-align: center;
 	color: white;
 	background: url('/images/Sequoias.jpg');
+	background-repeat: repeat-x;
 }
 
 .jumbotron p {
@@ -169,6 +170,18 @@ iframe#upcoming_style {
 	padding-right: 5px;
 	margin-top: -5px;
 	
+}
+
+.panel-body {
+	
+	background-image: url(/images/beigeparchment.jpg);
+}
+
+.panel-title {
+	text-align: center;
+	font-family: 'Tangerine', serif;
+  	font-size: 5em;
+  	text-shadow: 1em, 1em, 14em, #aaa;
 }
 
 footer {
