@@ -182,6 +182,7 @@
     <script id="entry-template" type="text/x-handlebars-template">
         <div class="panel panel-default">
             <div class="panel-body">
+				<div class="textareabg">
                 <div class="row cardheader">
                     
 					<span class="comment-name pull-left">{{name}}</span>
@@ -189,8 +190,9 @@
 
                 </div>
 				
-				<div class="row"> 
-						{{comment}}
+				<div class="row cardcommnt"> 
+					<span class="comment-comment">{{comment}}</span>
+				</div>
 				</div>
             </div>
         </div>
