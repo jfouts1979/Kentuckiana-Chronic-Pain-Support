@@ -105,8 +105,18 @@ iframe#google_upcoming_events {
 	height: 5em;
 }
 
+/*
 .temp_home_img {
 	max-height: 100%;
+		
+   float: none;
+   margin: 0 auto;
+}
+*/
+
+.col-centered{
+   float: none;
+   margin: 0 auto;
 }
 
 #gcal_full_frame {
