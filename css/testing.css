@@ -1,0 +1,220 @@
+
+
+
+
+
+body {
+	padding-top: 85px;
+}
+
+.jumbotron {
+	text-align: center;
+	color: white;
+	background: url('/images/Sequoias.jpg');
+	background-repeat: repeat-x;
+}
+
+.jumbotron p {
+	font-size: 1.5em;	
+}
+
+.upcomingstyle {
+	width: auto;
+	max-height: auto;
+}
+
+#about_info {
+	position: relative;
+}
+
+#about_info h2 {
+	text-align: center;
+	
+}
+
+#about_info p {
+	text-align: justify;
+}
+
+#current_news {
+	position: relative;
+}
+
+#current_news h2 {
+	text-align: center;
+}
+
+.glyphicon {
+	font-size: 1.5em;
+	display: blok;
+	text-align: left;
+	color: blue;
+}
+
+.adjustslidesize {
+	width: 260px;
+	height: 225px;
+	border: solid 1px #000;
+	border-radius: 4px;
+}
+
+#google_upcoming_events
+{
+    height: 210px;
+    width: 100%;
+	border: 2;
+	margin: 0;
+}
+
+iframe#google_upcoming_events {
+	vertical-align: top;	
+}
+
+#google_upcoming_events { vertical-align: baseline; }
+
+#upcoming_events {
+	text-align: center;
+}
+
+.index_icon_left {
+	float: left;
+	height: 5em;
+/*	position: absolute;*/
+}
+
+.index_icon_right {
+	float: right;
+	height: 5em;
+}
+
+/*
+.temp_home_img {
+	max-height: 100%;
+		
+   float: none;
+   margin: 0 auto;
+}
+*/
+
+#gcal_full_frame {
+	margin-bottom: 10px;
+	border: solid 5px #777;
+	width: 100%;
+	border-radius: 5px;
+	height: 600px;
+	border: 2;
+}
+
+.img_wrapper {
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 37.5px;
+	
+}
+
+.message {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.email_button {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	align-content: center;
+	text-align: center;
+}
+
+.send_email a {
+	font-size: 5em;
+	height: 200px;
+	width: 100%;
+	background-color: slategray;
+	color: white;
+	padding-left: 148.0625px;
+	padding-right: 148.0625px;
+	padding-top: 61px;
+	padding-bottom: 61px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	text-decoration: none;
+}
+
+.send_email a:visited {
+	color: darkblue;
+}
+
+.fill_images {
+	margin-top: 110px;
+	align-content: center;
+	text-align: center;
+}
+
+#Louisville_Email {
+	width: auto;
+	height: 175px;
+	text-align: left;
+	margin-left: 17.5px;
+	border-radius: 5px;
+	float: left;
+}
+
+#sphere_img {
+	margin-left: 65px;
+	height: 170px;
+	float: left;
+}
+
+#gmapdirect{
+    border-radius:2px;  
+    border:solid 3px beige;
+}
+
+
+
+.panel {
+	
+	border: 3px solid black;
+}
+
+.panel-body {
+	
+	background-image: url(/images/beigeparchment.jpg);
+}
+
+.cardheader {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: -5px;
+	background-color: white;	
+}
+
+.textareabg {
+	padding-left: 18px;
+	padding-right: 16px;
+	background-color: white;
+}
+
+.panel-title {
+	text-align: center;
+	font-family: 'Tangerine', serif;
+  	font-size: 5em;
+  	text-shadow: 1em, 1em, 14em, #aaa;
+}
+
+footer {
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	background-color: #f8f8f8;
+}
+
+Footer img {
+	border="0"; 
+	margin="1px";
+}
+
+.clearfix {
+  overflow: auto;
+}
