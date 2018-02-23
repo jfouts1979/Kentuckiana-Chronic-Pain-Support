@@ -10,7 +10,7 @@ body {
 .jumbotron {
 	text-align: center;
 	color: white;
-	background: url('/images/Sequoias.jpg');
+	background: url('images/Sequoias.jpg');
 	background-repeat: repeat-x;
 }
 
@@ -178,7 +178,7 @@ iframe#google_upcoming_events {
 
 .panel-body {
 	
-	background-image: url(/images/beigeparchment.jpg);
+	background-image: url(images/beigeparchment.jpg);
 }
 
 .cardheader {
